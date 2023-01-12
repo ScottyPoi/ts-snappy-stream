@@ -1,5 +1,17 @@
 # Changelog
 
+## [5.1.2](https://github.com/ChainSafe/node-snappy-stream/compare/v5.1.1...v5.1.2) (2023-01-12)
+
+
+### Bug Fixes
+
+* migrate to @chainsafe/fast-crc32c 4.0.0 ([#17](https://github.com/ChainSafe/node-snappy-stream/issues/17)) ([fb67a6c](https://github.com/ChainSafe/node-snappy-stream/commit/fb67a6c53681c567b7457ad8ea6f4df428b13843))
+
+
+### Miscellaneous
+
+* update readme ([78b25c2](https://github.com/ChainSafe/node-snappy-stream/commit/78b25c2e07559d1ca57b5f6da6cc2d1d7a6343a6))
+
 ### [5.1.1](https://github.com/ChainSafe/node-snappy-stream/compare/v5.1.0...v5.1.1) (2022-04-28)
 
 
