@@ -1,4 +1,4 @@
-# snappy-stream
+# ts-snappy-stream
 
 Compress data over a Stream using the snappy framing format
 
@@ -6,7 +6,7 @@ Compress data over a Stream using the snappy framing format
 ## Installation
 
 ```
-npm install @scottypoi/snappy-stream
+npm install @scottypoi/ts-snappy-stream
 ```
 
 

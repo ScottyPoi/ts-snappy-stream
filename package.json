@@ -1,5 +1,5 @@
 {
-  "name": "@scottypoi/snappy-stream",
+  "name": "@scottypoi/ts-snappy-stream",
   "version": "1.0.0",
   "description": "Compress and decompress data over a Stream using the snappy framing format",
   "main": "dist/index.js",
@@ -36,12 +36,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ScottyPoi/snappy-stream.git"
+    "url": "https://github.com/ScottyPoi/ts-snappy-stream.git"
   },
   "bugs": {
-    "url": "https://github.com/ScottyPoi/snappy-stream/issues"
+    "url": "https://github.com/ScottyPoi/ts-snappy-stream/issues"
   },
-  "homepage": "https://github.com/ScottyPoi/snappy-stream",
+  "homepage": "https://github.com/ScottyPoi/ts-snappy-stream",
   "engines": {
     "node": ">=22.14.0"
   }
