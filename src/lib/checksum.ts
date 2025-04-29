@@ -1,9 +1,8 @@
-var crc32c = require('@chainsafe/fast-crc32c').calculate
-var bufferAlloc = require('buffer-alloc')
+import { calculate } from '@chainsafe/fast-crc32c';
 
-module.exports = function (value) {
-  var x = crc32c(value)
-  var result = bufferAlloc(4)
+export function checksum(value: Uint8Array): Uint8Array {
+  const x = calculate(value);
+  const result = new Uint8Array(4);
 
   // As defined in section 3 of https://github.com/google/snappy/blob/master/framing_format.txt
   // And other implementations for reference:
@@ -12,7 +11,13 @@ module.exports = function (value) {
   // Mask the right hand to (32 - 17) = 15 bits -> 0x7fff, to keep correct 32 bit values.
   // Shift the left hand with >>> for correct 32 bit intermediate result.
   // Then final >>> 0 for 32 bits output
-  result.writeUInt32LE(((((x >>> 15) | ((x & 0x7fff) << 17)) + 0xa282ead8)) >>> 0, 0, true)
+  const masked = ((((x >>> 15) | ((x & 0x7fff) << 17)) + 0xa282ead8)) >>> 0;
+  
+  // Write the 32-bit value in little-endian format
+  result[0] = masked & 0xff;
+  result[1] = (masked >> 8) & 0xff;
+  result[2] = (masked >> 16) & 0xff;
+  result[3] = (masked >> 24) & 0xff;
 
-  return result
-}
+  return result;
+} 
