@@ -1,10 +1,14 @@
 {
-  "name": "@chainsafe/snappy-stream",
-  "version": "5.1.2",
-  "description": "Compress data over a Stream using the snappy framing format",
-  "main": "index.js",
+  "name": "@scottypoi/snappy-stream",
+  "version": "1.0.0",
+  "description": "Compress and decompress data over a Stream using the snappy framing format",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "tap test/*-test.js"
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "snappy",
@@ -13,7 +17,8 @@
   ],
   "contributors": [
     "David Björklund <david.bjorklund@gmail.com>",
-    "ChainSafe <info@chainsafe.io>"
+    "ChainSafe <info@chainsafe.io>",
+    "ScottyPoi <https://github.com/ScottyPoi>"
   ],
   "license": "MIT",
   "devDependencies": {
@@ -31,10 +36,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chainsafe/node-snappy-stream.git"
+    "url": "https://github.com/ScottyPoi/snappy-stream.git"
   },
   "bugs": {
-    "url": "https://github.com/chainsafe/node-snappy-stream/issues"
+    "url": "https://github.com/ScottyPoi/snappy-stream/issues"
   },
-  "homepage": "https://github.com/chainsafe/node-snappy-stream"
+  "homepage": "https://github.com/ScottyPoi/snappy-stream",
+  "engines": {
+    "node": ">=22.14.0"
+  }
 }
